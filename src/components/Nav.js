@@ -1,3 +1,4 @@
+import React from 'react';
 function Nav(props){
     const pages = ['Home','About','Services','Contact']
 return(
