@@ -6,6 +6,7 @@ import Btn from './components/Btn';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import RegisrationForm from './pages/RegistrationForm'
+import ListForm from './components/ListForm';
 
 const menu = [
   { 
@@ -32,17 +33,21 @@ function App() {
   const eventHandler = () => console.log('clicked');
   return (
     <div>
+      <Nav className="live" />
       <nav>
        < Link to="/" className="nav-item">Home</Link>
         <Link to="/contact" className="nav-item">Contact</Link>
+        <Link to="/member" className="nav-item">member</Link>
 	    </nav>
       <Routes> 
         <Route path="/" element={<Home />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/member" element={<RegisrationForm />}></Route>
       </Routes>
-      <Nav className="live" />
+      
       <Btn ev={eventHandler}/>
-      <RegisrationForm />
+      
+      <ListForm />
     </div>
   );
 }

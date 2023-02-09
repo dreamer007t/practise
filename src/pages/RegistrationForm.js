@@ -41,6 +41,7 @@ function RegistrationForm(){
         alert("registration completed")
         clearAll();
     }
+
     return(
         <form onSubmit={handleSubmit}>
             <h2>Registration Form</h2>
@@ -48,7 +49,7 @@ function RegistrationForm(){
                 <label>
                     Full Name:
                 </label>
-                <input placeholder="Full Name" value={fullName} onChange={e=> setFullName(e.target.value)} />
+                <input placeholder="Full Name" name="fname" value={fullName} onChange={e=> setFullName(e.target.value)} />
             </div>
             <div className="Field">
                 <label>
